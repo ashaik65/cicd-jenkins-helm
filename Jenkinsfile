@@ -7,7 +7,7 @@ pipeline {
                 sh 'mvn clean install package'
             }
         }
-        stage ('Copy Artificat') {
+        stage ('Copy Artifact') {
             steps {
                 sh 'pwd'
                 sh 'cp -r target/*.jar docker'
@@ -16,7 +16,7 @@ pipeline {
         stage ('Build docker image') {
             steps {
                 script {
-                    def customImage = docker.builld('srijananis123/petclinic', "./docker")
+                    def customImage = docker.build('srijananis123/petclinic', "./docker")
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
                     customImage.push('latest')    
                     }
