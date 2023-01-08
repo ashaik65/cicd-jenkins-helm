@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
   name: petclinic-deployment
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
