@@ -11,6 +11,6 @@ spec:
     app: petclinic-app
   type: NodePort
   ports:
-  - nodePort: 32751
+  - nodePort: 32000
     port: 8080
     targetPort: 8080
