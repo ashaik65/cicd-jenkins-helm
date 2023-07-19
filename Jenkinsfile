@@ -1,11 +1,6 @@
 pipeline {
   agent any	
-   stages {
-    stage('Install Maven') {
-      steps {
-        tool name: 'Maven', type: 'hudson.tasks.Maven$MavenInstallation'
-      }
-    }
+ 
     stages {      
         stage('Build maven ') {
             steps { 
